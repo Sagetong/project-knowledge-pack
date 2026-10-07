@@ -1,0 +1,51 @@
+# ============================================================
+#  .gitattributes —— 换行符与编码处理规则
+# ============================================================
+#
+#  这个文件的规则很简单：**谁也不许改**。
+#
+#  原因：本经验包包含两类"逐字节校验"的产物：
+#    ① core-manifest.txt        记录 19 个核心文件的 SHA256
+#    ② *.sig                    对清单与编年史的 Ed25519 签名
+#
+#  只要任何一个字节变化（包括换行符 LF <-> CRLF），
+#  哈希就对不上、签名就失效，使用者会误以为文件被篡改过。
+#
+#  所以这里【关闭所有自动转换】。文件存进去是什么字节，
+#  取出来就是什么字节，在任何操作系统上都是如此。
+#
+#  建立：2026-10-07
+#  起因：实测发现 clone 之后 core-manifest.txt.sig 从 294 字节
+#        变成 300 字节（6 个 LF 被改写成 CRLF）。
+# ============================================================
+
+# ---- 默认：不转换任何文件 ----
+* -text
+
+# ---- 明确标为二进制（既不做换行转换，也不做差异比较）----
+*.sig    binary
+*.bin    binary
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.zip    binary
+*.exe    binary
+*.dll    binary
+*.pdf    binary
+
+# ---- 以下仅为让 git diff 与 GitHub 正确按文本渲染 ----
+#      （-text 已经保证了不做换行转换，此处不改变字节）
+*.md     diff
+*.json   diff
+*.jsonl  diff
+*.ps1    diff
+*.cmd    diff
+*.txt    diff
+
+# ---- 语言标注（让 GitHub 正确高亮）----
+*.ps1    linguist-language=PowerShell
+*.jsonl  linguist-language=JSON
+
+# ---- 发布包不计入语言统计（避免把文档当成主语言）----
+*.md     linguist-documentation
