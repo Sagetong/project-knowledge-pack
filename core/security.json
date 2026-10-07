@@ -1,0 +1,67 @@
+{
+    "system":  "tiger-tally",
+    "version":  "2.0.0",
+    "created":  "2026-10-06T09:59:00+08:00",
+    "description":  "经验包核心安全策略 —— 此文件属于受保护层，需虎符解锁",
+    "publicLayer":  {
+                        "note":  "以下内容对世界公开（开源出去）",
+                        "paths":  [
+                                      "README.md",
+                                      "SCHEMA.md",
+                                      "00-底层逻辑\\ARCHITECTURE.md",
+                                      "00-底层逻辑\\GROWTH-MODEL.md",
+                                      "00-底层逻辑\\TIGER-TALLY-DESIGN.md",
+                                      "10-说明书\\*",
+                                      "20-历史经验\\data\\universal\\*",
+                                      "40-Skills\\_template\\*",
+                                      "40-Skills\\universal\\*",
+                                      "30-工具\\*"
+                                  ]
+                    },
+    "protectedLayer":  {
+                           "note":  "以下内容加密保护，仅作者可访问",
+                           "paths":  [
+                                         "core\\*",
+                                         "20-历史经验\\data\\local\\*",
+                                         "20-历史经验\\STATE.md",
+                                         "20-历史经验\\LESSONS.md",
+                                         "40-Skills\\local\\*",
+                                         "50-环境档案\\*"
+                                     ]
+                       },
+    "rules":  [
+                  "密钥文件必须与加密文件物理分离存放",
+                  "口令不存储于任何位置",
+                  "解锁后必须及时上锁",
+                  "分享前必须先 promote 并脱敏",
+                  "虎符 v2：核心层由作者 Ed25519 签名，使用者验签后才可使用",
+                  "私钥泄露是唯一真正严重的风险；名字泄露无所谓"
+              ],
+    "author":  {
+                   "name":  "Sage Tong",
+                   "publicName":  true,
+                   "note":  "名字是公开身份标识，不承担保密职责。安全由密钥对承担。公开名字建立信任，不公开反而可疑。"
+               },
+    "tigerTallyV2":  {
+                         "principle":  "虎符两半：私钥签名（左符，作者独占）+ 公钥验签（右符，公开发布）",
+                         "algorithm":  "Ed25519 (ssh-keygen)",
+                         "keyPairLocation":  "私钥离线保存且绝不进仓库；公钥发布为 allowed_signers",
+                         "verifyCommand":  "ssh-keygen -Y verify -f allowed_signers -I tally-author@SageTong -n file -s core-manifest.txt.sig \u003c core-manifest.txt",
+                         "verifiedAt":  "2026-10-07",
+                         "testResult":  "四项全通过：签名成功 / 原文件验签通过 / 篡改被检出 / 冒名被拒绝",
+                         "signerIdentity":  "tally-author@SageTong",
+                         "publicKeyFingerprintDemo":  "SHA256:rHg48crFstI75H1I67iz/zQpehf5nPcVOQTQA0Hiuao",
+                         "fingerprintNote":  "上述指纹为 DEMO 测试密钥，正式密钥需 Sage Tong 本人生成",
+                         "tools":  [
+                                       "90-虎符v2/sign-core.ps1 (作者用)",
+                                       "90-虎符v2/verify-core.ps1 (使用者用)"
+                                   ],
+                         "keyRules":  [
+                                          "R1 私钥绝不进仓库（写入 .gitignore）",
+                                          "R2 私钥与经验包物理分离存放",
+                                          "R3 正式使用必须设口令",
+                                          "R4 私钥至少两份离线备份",
+                                          "R5 公钥可随意公开"
+                                      ]
+                     }
+}

@@ -1,0 +1,144 @@
+{
+    "schema":  "ai-roundtable/registry/v2",
+    "description":  "AI 圆桌会议参与者注册表。新增 AI 只需追加一项。",
+    "roles_legend":  {
+                         "operator":  "操作员。唯一有权操控电脑。同一时刻全系统仅一人（A/B 权限交替）。",
+                         "advisor":  "顾问。只提供分析与意见，不得操控电脑、不得写文件。",
+                         "recorder":  "记录员。撰写纪要、维护台账、校验格式。",
+                         "observer":  "观察者。只读，旁听优先，不发言不操作。",
+                         "memory-keeper":  "记忆守护。定期读取桌面文件夹以重建对系统的认知。",
+                         "emergency-responder":  "急救员。主执行体失效时提供不受影响的诊断与恢复。"
+                     },
+    "participants":  [
+                         {
+                             "id":  "DSH",
+                             "display":  "DeepSeek Harness",
+                             "location":  "本机",
+                             "roles":  [
+                                           "operator",
+                                           "recorder"
+                                       ],
+                             "can_control_computer":  true,
+                             "can_write_files":  true,
+                             "can_read_files":  true,
+                             "reachable_by":  "natively",
+                             "notes":  "第一责任执行体。当前唯一操作员与记录员。具备跨会话长期记忆（经验包）。"
+                         },
+                         {
+                             "id":  "DESKTOP",
+                             "display":  "桌面版 ChatGPT / Codex agent",
+                             "location":  "本机（桌面应用内）",
+                             "roles":  [
+                                           "advisor"
+                                       ],
+                             "can_control_computer":  false,
+                             "can_write_files":  false,
+                             "can_read_files":  true,
+                             "reachable_by":  "codex queue --thread \u003cTHREAD_ID\u003e --message \u003cTEXT\u003e",
+                             "capabilities":  [
+                                                  "functions.exec_command",
+                                                  "functions.view_image",
+                                                  "web.run",
+                                                  "collaboration.spawn_agent",
+                                                  "collaboration.send_message",
+                                                  "collaboration.list_agents",
+                                                  "collaboration.wait_agent",
+                                                  "collaboration.interrupt_agent",
+                                                  "collaboration.followup_task",
+                                                  "functions.create_goal",
+                                                  "functions.update_goal"
+                                              ],
+                             "lacks":  [
+                                           "read_thread"
+                                       ],
+                             "notes":  "顾问。权限档 read-only + 网络受限 + 审批 never。具备子智能体编排能力。"
+                         },
+                         {
+                             "id":  "CODEX",
+                             "display":  "Codex CLI 独立实例",
+                             "location":  "本机",
+                             "roles":  [
+                                           "advisor"
+                                       ],
+                             "can_control_computer":  false,
+                             "can_write_files":  false,
+                             "can_read_files":  true,
+                             "reachable_by":  "codex exec -C \u003cdir\u003e \u003cPROMPT\u003e",
+                             "invoke":  "synchronous",
+                             "lacks":  [
+                                           "read_thread"
+                                       ],
+                             "notes":  "同步调用，10-30 秒。适合快速独立审查。"
+                         },
+                         {
+                             "id":  "PHONE",
+                             "display":  "手机版 ChatGPT",
+                             "location":  "云端",
+                             "roles":  [
+                                           "advisor"
+                                       ],
+                             "can_control_computer":  false,
+                             "can_write_files":  false,
+                             "can_read_files":  false,
+                             "reachable_by":  "user-forward | remote-control-session",
+                             "invoke":  "manual",
+                             "notes":  "无法自动入席。其对话经桌面应用引用后最多 5 轮预览落入本地会话文件。"
+                         },
+                         {
+                             "id":  "QWEN",
+                             "display":  "千问",
+                             "location":  "本机（GUI）",
+                             "roles":  [
+                                           "advisor",
+                                           "observer",
+                                           "backup-operator"
+                                       ],
+                             "can_control_computer":  true,
+                             "can_write_files":  true,
+                             "can_read_files":  true,
+                             "reachable_by":  "manual-only",
+                             "invoke":  "manual",
+                             "capabilities":  [
+                                                  "local-file-search",
+                                                  "file-deep-organize",
+                                                  "agent_host",
+                                                  "cua",
+                                                  "qwen-command-runner"
+                                              ],
+                             "lacks":  [
+                                           "CLI 入口"
+                                       ],
+                             "usage":  {
+                                           "principle":  "备选，不是受限。平常不主动调用，需要时能正常干活。",
+                                           "user_direct":  "用户主动打开千问使用 —— 此时 DSH 的程序默认关闭，不会抢夺控制权，因此无需限制千问",
+                                           "called_by_dsh":  "DSH 需要时人工转达 —— 但 DSH 一般自己能处理完，很少需要",
+                                           "roundtable":  "圆桌会议时由用户带入，只需告诉它最近发生了什么",
+                                           "not_the_first_choice":  "遇到处理不了的事，正确做法是【上报用户 + 把简报发到远程控制 GPT 窗口】，而不是叫千问"
+                                       },
+                             "constraints":  [
+                                                 "不主动抢夺电脑控制权（用户在用别的 AI 时不介入）",
+                                                 "平常正常的操作不要随便调用它"
+                                             ],
+                             "notes":  "平时不叫、需要时能正常干活的备选。此前曾错误地把它限制成\"只读\"，那是对\"防止控制权冲突\"的误读 —— 限制的对象是冲突，不是能力。"
+                         }
+                     ],
+    "operator_policy":  {
+                            "mode":  "exclusive-AB",
+                            "description":  "A/B 权限交替：同一时刻只允许一个参与者持有 operator 角色。",
+                            "current_operator":  "DSH",
+                            "standby_operator":  "DESKTOP",
+                            "history":  [
+                                            {
+                                                "at":  "2026-10-07T11:20:00+08:00",
+                                                "operator":  "DSH",
+                                                "reason":  "初始化",
+                                                "by":  "user"
+                                            }
+                                        ]
+                        },
+    "escalation_policy":  {
+                              "when":  "DSH 与其它 AI 都处理不了",
+                              "how":  "DSH 写简报 → push 到桌面 ChatGPT 的远程控制窗口「GPT远程指挥电脑」→ 用户转给手机版 GPT",
+                              "not_how":  "不要转而叫千问 —— 千问是备选，不是上报对象"
+                          }
+}

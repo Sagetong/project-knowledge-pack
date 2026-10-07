@@ -1,0 +1,56 @@
+{
+    "framework":  "DSH-LongTermMemory",
+    "version":  "1.1.0",
+    "created":  "2026-10-06T09:50:00+08:00",
+    "updated":  "2026-10-06T09:50:49+08:00",
+    "description":  "长期记忆框架 —— 让任何 AI 可直接读取、追加、查询项目状态与经验",
+    "design":  {
+                   "why_jsonl":  "追加安全、逐行可读、机器可解析、grep 友好",
+                   "namespaces":  {
+                                      "local":  "本机特有（路径/IP/配置），不外传",
+                                      "universal":  "抽象出的通用知识，可分享",
+                                      "contributed":  "外部贡献的隔离区（预留）"
+                                  },
+                   "files":  {
+                                 "facts.jsonl":  "事实库：经过验证或标注为假设的判断",
+                                 "lessons.jsonl":  "经验库：踩过的坑、方法论、可复用技巧",
+                                 "timeline.jsonl":  "时间线：发生了什么",
+                                 "decisions.jsonl":  "决策库：为什么选了 A 而不是 B"
+                             }
+               },
+    "schemaRef":  "SCHEMA.md",
+    "stats":  {
+                  "byNamespace":  {
+                                      "local":  {
+                                                    "facts":  26,
+                                                    "lessons":  20,
+                                                    "timeline":  38,
+                                                    "decisions":  11
+                                                },
+                                      "universal":  {
+                                                        "facts":  0,
+                                                        "lessons":  1,
+                                                        "timeline":  1,
+                                                        "decisions":  0
+                                                    },
+                                      "contributed":  {
+                                                          "facts":  0,
+                                                          "lessons":  1,
+                                                          "timeline":  1,
+                                                          "decisions":  0
+                                                      }
+                                  },
+                  "totals":  {
+                                 "facts":  26,
+                                 "lessons":  22,
+                                 "timeline":  40,
+                                 "decisions":  11
+                             }
+              },
+    "tools":  {
+                  "read":  "memory.ps1  —— context / search / facts / lessons / timeline / decisions",
+                  "write":  "harvest.ps1 —— 固化经验 + 生成 Skill（-Namespace 指定命名空间）",
+                  "promote":  "promote.ps1 —— local → universal 提升（含敏感信息扫描）",
+                  "verify":  "manifest.ps1 -Verify"
+              }
+}

@@ -1,0 +1,99 @@
+﻿{
+    "schema":  "experience-pack/core-baseline/v1",
+    "generated":  "2026-10-07T11:50:38+08:00",
+    "author":  "DSH (DeepSeek Harness)",
+    "purpose":  "核心层哈希基线。合并他人经验包时用此校验核心是否被改动；任何不一致都应拒绝导入。",
+    "protected_paths":  [
+                            "core",
+                            "00-底层逻辑",
+                            "30-工具"
+                        ],
+    "file_count":  17,
+    "files":  [
+                  {
+                      "path":  "core\\README.md",
+                      "size":  585,
+                      "sha256":  "25f8026ba6dc29316d9c026c3064648cf3f9d0698d360babd43b1b39163a22af"
+                  },
+                  {
+                      "path":  "core\\security.json",
+                      "size":  1963,
+                      "sha256":  "8776a3a233a4cd6bf2fed96ddb590915451ddfa96f3f8f876e8c2d689cd462c7"
+                  },
+                  {
+                      "path":  "00-底层逻辑\\ARCHITECTURE.md",
+                      "size":  8062,
+                      "sha256":  "270d201e5fb75a4288b7d34331181db700e212bac246b8a41273ca1c9c2a6805"
+                  },
+                  {
+                      "path":  "00-底层逻辑\\ARCHITECTURE-3AI.md",
+                      "size":  7870,
+                      "sha256":  "cc532a92ff4896b6d07b303e8f4ad99c802fb46d62746b07d8c13461d6e1ed05"
+                  },
+                  {
+                      "path":  "00-底层逻辑\\GROWTH-MODEL.md",
+                      "size":  7853,
+                      "sha256":  "a5b02a2887c714a9d12a554b35ddb035930598c86f190d3fd2f75f21cd2c1d1a"
+                  },
+                  {
+                      "path":  "00-底层逻辑\\TIGER-TALLY-DESIGN.md",
+                      "size":  11487,
+                      "sha256":  "b488683e4589c6f90d5525963aff90d3bf83b764deec0e7923c1ebb09a18f2b2"
+                  },
+                  {
+                      "path":  "30-工具\\harvest.ps1",
+                      "size":  10755,
+                      "sha256":  "68147091a36e5f840f47dbe6c2d1ee62d184bb07907ccf28bdb1882baec10183"
+                  },
+                  {
+                      "path":  "30-工具\\manifest.ps1",
+                      "size":  6291,
+                      "sha256":  "84892170fa04475c0630917cf8f3c2ef59e39cfab37256c55ab4bdb80b064d4a"
+                  },
+                  {
+                      "path":  "30-工具\\memory.ps1",
+                      "size":  15246,
+                      "sha256":  "d5954f330bd4fd6f2cc8e274a2799f891ed99cd845cfe2853c73128be34bb69c"
+                  },
+                  {
+                      "path":  "30-工具\\promote.ps1",
+                      "size":  7968,
+                      "sha256":  "8b6a7d82d8fc731ad53fdf796ad227ce27cd2667dcc888cac4bc6877adc1ffe5"
+                  },
+                  {
+                      "path":  "30-工具\\sync-pack.ps1",
+                      "size":  5233,
+                      "sha256":  "4332466d03ecc958afc6766f4f8afa4468cf4b44cc4fa14f6d65acef02273c2b"
+                  },
+                  {
+                      "path":  "30-工具\\tally\\init-tally.ps1",
+                      "size":  8797,
+                      "sha256":  "b42b8ad7674f2698984c5a405f6fdcf0a9916e046d97d0e13c7b199fb6a1a0a1"
+                  },
+                  {
+                      "path":  "30-工具\\tally\\lock.ps1",
+                      "size":  7323,
+                      "sha256":  "9e1821dc5230533dc85015a0229224074434f95deb073f319ce1132be79d9d4b"
+                  },
+                  {
+                      "path":  "30-工具\\tally\\README.md",
+                      "size":  6498,
+                      "sha256":  "5155ad45f4ec9afc5687d88744144f94fb43d0073cffd44279fcab010334c69f"
+                  },
+                  {
+                      "path":  "30-工具\\tally\\tally-lib.ps1",
+                      "size":  14371,
+                      "sha256":  "c21c741442e1181ee826cb61acbda3c986efa6b58ac31c4b315914fffcee2f1d"
+                  },
+                  {
+                      "path":  "30-工具\\tally\\unlock.ps1",
+                      "size":  6803,
+                      "sha256":  "1fe4c7b8e1d2f8f5f6fa74973a6c2e22165bb5d065096337c2ffa17dfeb0f228"
+                  },
+                  {
+                      "path":  "30-工具\\tally\\verify-tally.ps1",
+                      "size":  8711,
+                      "sha256":  "37404fe8b8626c822d02bf086d89e9c2323745f307c11ea383ec7624cb8a786f"
+                  }
+              ]
+}

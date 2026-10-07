@@ -1,0 +1,43 @@
+# ===== 虎符安全 · 绝对不得提交 =====
+*_ed25519
+*_ed25519.pub
+*.pem
+*tally-key*
+*private*key*
+core/.keys/
+90-虎符v2/.keys/
+
+# ===== 本地隐私层（虎符 protectedLayer）=====
+# 注意：data/local/ 不能写成"排除整个目录"，否则 git 不会进入该目录，
+#       里面的 README.md 就无法被单独放行。写法见文件末尾。
+20-历史经验/data/local/*
+20-历史经验/STATE.md
+20-历史经验/LESSONS.md
+40-Skills/local/
+50-环境档案/
+
+# ===== 运行时产物 =====
+*.log
+sync.log
+20-历史经验/data/sync.log
+# ===== 本机工作记录（开源时不应包含）=====
+_身份说明-*.md
+DESKTOP-REGISTRY.md
+PROGRESS.md
+
+# ===== 虎符运行时产物（使用者自己生成的，不该提交）=====
+90-虎符v2/*.bin
+90-虎符v2/*-meta.json
+90-虎符v2/_passphrase_temp.txt
+
+# ===== 任何形式的备份 =====
+*.bak
+*.bak-*
+*.orig
+*~
+# ===== 例外：本机层的说明文件要保留 =====
+# 注意写法：不能写成 "20-历史经验/data/local/"（排除整个目录），
+# 因为 git 不会进入被排除的目录，里面的文件就无法被单独放行。
+# 正确写法是排除【目录里的内容】，再对具体文件取反。
+20-历史经验/data/local/*
+!20-历史经验/data/local/README.md
