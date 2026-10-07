@@ -82,6 +82,48 @@ AI 解决一个问题
 
 ---
 
+## 运行环境（前置条件）
+
+**下面这些是**实测确认过**的要求。都不需要另外安装。**
+
+| 需要什么 | 版本 / 位置 | Windows 自带吗 |
+|---|---|---|
+| **Windows** | 10 或 11 | — |
+| **Windows PowerShell** | **5.1 或更高** | ✅ **自带**（`C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe`）|
+| **OpenSSH 客户端** | 用于验签 | ✅ **Windows 10 1809+ 自带**（`C:\WINDOWS\System32\OpenSSH\ssh-keygen.exe`）|
+
+**⚠️ 关于执行策略：**
+
+```
+Windows 默认的执行策略通常是 Restricted（禁止运行脚本）。
+本项目所有示例命令都带 -ExecutionPolicy Bypass，
+所以【不需要】你修改系统执行策略。
+
+如果你手工直接双击 .ps1，可能会被挡住 —— 请按 README 里的命令形式调用。
+```
+
+**⚠️ 关于目录位置：**
+
+```
+包必须放在【可写】的目录里（因为写入经验要创建/修改文件）。
+不要把包放在：
+   · 只读位置
+   · 受系统保护的目录（如 C:\Program Files\ 下）
+   · 正在被云盘实时同步的目录（可能产生写入冲突）
+```
+
+**⚠️ 如果你在非 Windows 系统上：**
+
+```
+数据部分（.md / .jsonl）是纯文本，任何系统都能读。
+验签用的是标准 OpenSSH 命令，Linux / macOS 上的写法相同：
+   ssh-keygen -Y verify -f allowed_signers -I tally-author@SageTong \
+              -n file -s core-manifest.txt.sig < core-manifest.txt
+但工具脚本（30-工具\*.ps1）目前只在 Windows PowerShell 5.1 上验证过。
+```
+
+---
+
 ## 快速开始
 
 > **v0.1 是 Windows 优先的。**非 Windows 用户目前只能读取数据（数据是纯文本），工具层需要改写。
