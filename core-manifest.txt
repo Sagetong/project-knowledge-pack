@@ -2,7 +2,7 @@
 # Purpose: list every core file with its SHA256 fingerprint.
 # Verify:  ssh-keygen -Y verify -f allowed_signers -I tally-author@SageTong -n file -s core-manifest.txt.sig < core-manifest.txt
 # Author:  Sage Tong
-# Created: 2026-10-07T18:21:48+08:00
+# Created: 2026-10-07T18:32:22+08:00
 
 core\README.md  572c790440c906dc7a7b35e61186a1dca467e8c5293fa63683e213b7b5917665
 core\security.json  0c778253cd4d86272583a8212c593dbefeb391f2462b444f231b9d9f0b75d23a
