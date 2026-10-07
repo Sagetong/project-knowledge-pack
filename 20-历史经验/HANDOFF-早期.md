@@ -39,9 +39,9 @@ DeepSeek（deepseek-official / deepseek-flash）+ 22 个电脑工具
 **三个进程**：
 | 组件 | 位置 | 文件 |
 |---|---|---|
-| mobile-client | `0.0.0.0:8788` | `%USERPROFILE%\agents\bridge-client\mobile-client-test\server.js` |
-| bridge | `127.0.0.1:8787` | `%USERPROFILE%\agents\bridge-client\http-bridge-test\bridge.js` |
-| dsh-sdk-app | 子进程 | `%USERPROFILE%\.dsh\profiles\sdk\` |
+| mobile-client | `0.0.0.0:8788` | `<用户目录>\agents\bridge-client\mobile-client-test\server.js` |
+| bridge | `127.0.0.1:8787` | `<用户目录>\agents\bridge-client\http-bridge-test\bridge.js` |
+| dsh-sdk-app | 子进程 | `<用户目录>\.dsh\profiles\sdk\` |
 
 ---
 
@@ -166,7 +166,7 @@ Profile：Public     Group：(空)     PolicyStore：Local
 ## 八、文件位置索引
 
 ```
-%USERPROFILE%\agents\bridge-client\
+<用户目录>\agents\bridge-client\
    ├─ http-bridge-test\bridge.js              ← 核心 bridge（已验收，勿改）
    ├─ http-bridge-test\bridge.log
    ├─ mobile-client-test\server.js            ← 手机页面 + 反向代理
@@ -177,5 +177,5 @@ Profile：Public     Group：(空)     PolicyStore：Local
    ├─ fwlog-before.txt                        ← 日志设置改动前快照
    └─ HANDOFF.md                              ← 本文件
 
-%USERPROFILE%\.dsh\profiles\sdk\     ← SDK profile（官方模板自动创建）
+<用户目录>\.dsh\profiles\sdk\     ← SDK profile（官方模板自动创建）
 ```

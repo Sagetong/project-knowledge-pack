@@ -86,7 +86,7 @@ memory\
 ### 读取
 
 ```powershell
-cd %USERPROFILE%\agents\bridge-client\memory
+cd <用户目录>\agents\bridge-client\memory
 
 # 概览（默认）
 .\memory.ps1

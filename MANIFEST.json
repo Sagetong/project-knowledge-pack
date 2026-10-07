@@ -1,11 +1,11 @@
 {
     "pack":  "experience-pack",
     "version":  "1.0.0",
-    "generated":  "2026-10-07T17:38:39+08:00",
+    "generated":  "2026-10-07T18:20:16+08:00",
     "packRoot":  ".",
     "summary":  {
-                    "files":  71,
-                    "totalBytes":  625339,
+                    "files":  69,
+                    "totalBytes":  548086,
                     "records":  {
                                     "facts":  80,
                                     "lessons":  89,
@@ -34,10 +34,16 @@
                  },
     "files":  [
                   {
+                      "path":  ".gitattributes",
+                      "bytes":  1758,
+                      "mtime":  "2026-10-07T17:58:07",
+                      "sha256":  "21A279FAF6DE21A6FBFE927098DFFC36D251B63BF7AE6111BF8DC51A14F93775"
+                  },
+                  {
                       "path":  ".gitignore",
-                      "bytes":  709,
-                      "mtime":  "2026-10-07T16:27:19",
-                      "sha256":  "3DDE624B52A4EA3C648E6FE2157A52C12B88466035CB1B4E5E6E22BF44BB491A"
+                      "bytes":  1515,
+                      "mtime":  "2026-10-07T18:15:52",
+                      "sha256":  "D9E3B6059447E5EAC92B607357B350F8BC917489F840B47E2275D6F3E9738663"
                   },
                   {
                       "path":  "00-底层逻辑\\ARCHITECTURE.md",
@@ -48,7 +54,7 @@
                   {
                       "path":  "00-底层逻辑\\ARCHITECTURE-3AI.md",
                       "bytes":  7870,
-                      "mtime":  "2026-10-07T17:38:38",
+                      "mtime":  "2026-10-07T18:20:15",
                       "sha256":  "AF7E2E6E240F8AAC101F5CE4E345868A8DFAE9BBC67C68C9DCBDB420BB07CFF0"
                   },
                   {
@@ -58,6 +64,12 @@
                       "sha256":  "A5B02A2887C714A9D12A554B35DDB035930598C86F190D3FD2F75F21CD2C1D1A"
                   },
                   {
+                      "path":  "00-底层逻辑\\MAINTAINER-WORKFLOW.md",
+                      "bytes":  2109,
+                      "mtime":  "2026-10-07T18:14:48",
+                      "sha256":  "38C52B317910028643CFC51B078082319F83FF1731CFE0B4F5185D5D9A87C18F"
+                  },
+                  {
                       "path":  "00-底层逻辑\\TIGER-TALLY-DESIGN.md",
                       "bytes":  11487,
                       "mtime":  "2026-10-06T09:55:31",
@@ -65,9 +77,9 @@
                   },
                   {
                       "path":  "10-说明书\\AGENTS.md",
-                      "bytes":  13853,
-                      "mtime":  "2026-10-07T17:38:38",
-                      "sha256":  "7B6E89B9705A557A97DA3B0ED008593B87990AF2EEFB440801AB538632B6D5E2"
+                      "bytes":  14264,
+                      "mtime":  "2026-10-07T18:20:15",
+                      "sha256":  "6FCDA578C083BCE72B9F28F24BA98945AE77555F31AAE5A7A45064495E07C0DD"
                   },
                   {
                       "path":  "10-说明书\\FOR-AI.md",
@@ -77,15 +89,9 @@
                   },
                   {
                       "path":  "10-说明书\\FOR-HUMAN.md",
-                      "bytes":  4318,
-                      "mtime":  "2026-10-07T17:38:38",
-                      "sha256":  "3E3457C98A86C3DA3659F3C9F45CF62C8A739E7E27B4A6520C8B2A86FCCD2920"
-                  },
-                  {
-                      "path":  "20-历史经验\\data\\CONTEXT.md",
-                      "bytes":  66782,
-                      "mtime":  "2026-10-07T17:38:17",
-                      "sha256":  "35CFD3276518646F46868E8F8E7BED1BD2CAF94CD9A781946E6F7E2753F8E11F"
+                      "bytes":  4346,
+                      "mtime":  "2026-10-07T18:17:32",
+                      "sha256":  "007C1D254564190284B79F7EDC7C8C44D8177F3ACA8933E25980BAD2345CCD89"
                   },
                   {
                       "path":  "20-历史经验\\data\\contributed\\lessons.jsonl",
@@ -114,14 +120,14 @@
                   {
                       "path":  "20-历史经验\\data\\local\\README.md",
                       "bytes":  391,
-                      "mtime":  "2026-10-07T17:38:38",
+                      "mtime":  "2026-10-07T18:20:15",
                       "sha256":  "E703C234C6E1E5039AB8195179EE2EE9712F32AE3D5B227714C03953553F9EC5"
                   },
                   {
                       "path":  "20-历史经验\\data\\README.md",
-                      "bytes":  5419,
-                      "mtime":  "2026-10-07T16:26:05",
-                      "sha256":  "7FA914F8930F7883BB676A8B293344220053F862401260BCB39581030A45AC9A"
+                      "bytes":  5420,
+                      "mtime":  "2026-10-07T18:17:54",
+                      "sha256":  "32FF44EE97FA34360BAD99D759D5B65DFE8DC80C575D16EFA6847189472702BD"
                   },
                   {
                       "path":  "20-历史经验\\data\\universal\\decisions.jsonl",
@@ -131,9 +137,9 @@
                   },
                   {
                       "path":  "20-历史经验\\data\\universal\\facts.jsonl",
-                      "bytes":  50614,
-                      "mtime":  "2026-10-07T17:38:38",
-                      "sha256":  "F0A845941A86249F6C645FF7D9EB96C8787931C0EE37F37D2863AAB58C4C0D91"
+                      "bytes":  50618,
+                      "mtime":  "2026-10-07T18:20:15",
+                      "sha256":  "09FE73662061A2A8D4715EF62CD1DC804F14B38C77BF7D0FE3CD3C4DF9675609"
                   },
                   {
                       "path":  "20-历史经验\\data\\universal\\lessons.jsonl",
@@ -149,15 +155,15 @@
                   },
                   {
                       "path":  "20-历史经验\\data\\universal\\timeline.jsonl",
-                      "bytes":  33678,
-                      "mtime":  "2026-10-07T15:52:15",
-                      "sha256":  "A52273066E682C2885BBDD1DA4914FDC9554652DB233B5D6EF63D479605B4248"
+                      "bytes":  33680,
+                      "mtime":  "2026-10-07T18:20:15",
+                      "sha256":  "7D68BDC3C44A19521129B4E3102B399D232FAF400787445633E2D33236F3C00D"
                   },
                   {
                       "path":  "20-历史经验\\HANDOFF-早期.md",
-                      "bytes":  7945,
-                      "mtime":  "2026-10-07T16:25:13",
-                      "sha256":  "F8AFFDB12C11E01520D09DD2FDA08ED5C4428413E72EBB7D136563D1FB0A3F7C"
+                      "bytes":  7950,
+                      "mtime":  "2026-10-07T18:17:54",
+                      "sha256":  "C83B27C6C1A1375ABDC35BB04274802F5BA158C9444E078955A14D82CB94EEB5"
                   },
                   {
                       "path":  "20-历史经验\\LESSONS.md",
@@ -167,9 +173,9 @@
                   },
                   {
                       "path":  "20-历史经验\\STATE.md",
-                      "bytes":  15444,
-                      "mtime":  "2026-10-07T16:30:15",
-                      "sha256":  "762D3D1440FE60D56F33877E818AD6D7A9A770DBFBF8016C38D308D7C6529047"
+                      "bytes":  15459,
+                      "mtime":  "2026-10-07T18:20:15",
+                      "sha256":  "F304CE6FB15EF10AA4F35189274227C9FFA456B255CBC6445B7B2187651023AE"
                   },
                   {
                       "path":  "30-工具\\harvest.ps1",
@@ -185,33 +191,27 @@
                   },
                   {
                       "path":  "30-工具\\memory.ps1",
-                      "bytes":  16381,
-                      "mtime":  "2026-10-07T17:38:38",
-                      "sha256":  "1F6C1FCB6F7216A6FA64444714131AFA302930E6C17864CCECDC7359BCFF9CBE"
+                      "bytes":  16927,
+                      "mtime":  "2026-10-07T18:17:32",
+                      "sha256":  "33D49EBD81AC0CA8D8DE5700699C419A798E6B2177C44710FC82896A55ED14F5"
                   },
                   {
                       "path":  "30-工具\\promote.ps1",
                       "bytes":  7976,
-                      "mtime":  "2026-10-07T17:38:38",
+                      "mtime":  "2026-10-07T18:20:15",
                       "sha256":  "ED2E20FBE1FEAE640488D47090513AB2E0DF989D0305AFCCA4D0DC1CCD7ACB00"
                   },
                   {
                       "path":  "30-工具\\promote-to-universal.ps1",
                       "bytes":  6410,
-                      "mtime":  "2026-10-07T17:38:38",
+                      "mtime":  "2026-10-07T18:20:15",
                       "sha256":  "6D3AB7CB9066B85BC4CC84E9E54A627CA886DBD2AD5C4B30C528F3629C8580A2"
                   },
                   {
-                      "path":  "30-工具\\sanitize-release.ps1",
-                      "bytes":  7337,
-                      "mtime":  "2026-10-07T17:38:38",
-                      "sha256":  "7B374305D915CE829034FADA53A16313988AE09855F45601CC4A50F63FAA13D8"
-                  },
-                  {
                       "path":  "30-工具\\sync-pack.ps1",
-                      "bytes":  5806,
-                      "mtime":  "2026-10-07T17:38:38",
-                      "sha256":  "703553A45D2F37CFD700734832E55BFEA45F3DFE788CD187A2936466C6C3D61B"
+                      "bytes":  7469,
+                      "mtime":  "2026-10-07T18:20:15",
+                      "sha256":  "759C2A155C38C233681D000365201119656DEEF957A37C6849F1920BF582BE18"
                   },
                   {
                       "path":  "30-工具\\tally\\init-tally.ps1",
@@ -228,7 +228,7 @@
                   {
                       "path":  "30-工具\\tally\\README.md",
                       "bytes":  6500,
-                      "mtime":  "2026-10-07T17:38:38",
+                      "mtime":  "2026-10-07T18:20:15",
                       "sha256":  "694980EA5FE4E15C92D5B76401F65FE8D3896FB804F6AE79CEBFD05E4E47585B"
                   },
                   {
@@ -240,7 +240,7 @@
                   {
                       "path":  "30-工具\\tally\\unlock.ps1",
                       "bytes":  6805,
-                      "mtime":  "2026-10-07T17:38:38",
+                      "mtime":  "2026-10-07T18:20:15",
                       "sha256":  "5074C490D513C0AFA20DFBA6E4CE1454E1B2832563759C28262CA51B4B72C453"
                   },
                   {
@@ -270,26 +270,26 @@
                   {
                       "path":  "70-文明史书\\chronicle.jsonl",
                       "bytes":  4777,
-                      "mtime":  "2026-10-07T17:38:38",
+                      "mtime":  "2026-10-07T18:20:15",
                       "sha256":  "8AFFD6147507CCACED79BD63A637F9F64E8E494B0841B05369AB4B062DF46070"
                   },
                   {
                       "path":  "70-文明史书\\chronicle.jsonl.anchor.txt",
                       "bytes":  244,
-                      "mtime":  "2026-10-07T15:43:47",
-                      "sha256":  "BEE98B8E85B57FA4AE4D4B70D538DB752FAB4D8A3906282E10A9C54422B33DED"
+                      "mtime":  "2026-10-07T17:46:09",
+                      "sha256":  "F8D0ECC002596077E908D02E9551872DE0F28F84022A1E8B882766A4246869BA"
                   },
                   {
                       "path":  "70-文明史书\\chronicle.jsonl.anchor.txt.sig",
                       "bytes":  294,
-                      "mtime":  "2026-10-07T15:43:47",
-                      "sha256":  "86F3B8F737BE8AF107B7E4F0DA6627BBC07DBF631039F2A14F853440371B8814"
+                      "mtime":  "2026-10-07T17:46:09",
+                      "sha256":  "F809AA553C5A120230AD0E3F05E1570A139FFD3C6CDED2F71AFCA9DF3A10F403"
                   },
                   {
                       "path":  "70-文明史书\\chronicle.jsonl.sig",
                       "bytes":  294,
-                      "mtime":  "2026-10-07T15:43:48",
-                      "sha256":  "EF207B9E8FFAA87FF6328B4F106C8D43022719C7EF88BBF93E321473965806F3"
+                      "mtime":  "2026-10-07T17:46:09",
+                      "sha256":  "725A2D18B689185A27EC7C0FA349F28BDE0A3DC8EE02B7BFD4DFA74704366FEE"
                   },
                   {
                       "path":  "70-文明史书\\index.md",
@@ -384,7 +384,7 @@
                   {
                       "path":  "allowed_signers",
                       "bytes":  129,
-                      "mtime":  "2026-10-07T15:43:47",
+                      "mtime":  "2026-10-07T17:46:08",
                       "sha256":  "5B588BE3859CCCC439E863A189957604DF7A0B508DCBB4BC7D4893048C7A7BF2"
                   },
                   {
@@ -401,15 +401,15 @@
                   },
                   {
                       "path":  "core-manifest.txt",
-                      "bytes":  1972,
-                      "mtime":  "2026-10-07T15:43:46",
-                      "sha256":  "B9CCFCC09A00270BED7A284C4F9273AADF2D2E4543B0A34B4342ACD5FF78308C"
+                      "bytes":  2070,
+                      "mtime":  "2026-10-07T17:46:08",
+                      "sha256":  "2F38D5B2A41F917153EF9C7AF0545AC651A9A12AE64F8FC8CF5C95926AEC35A9"
                   },
                   {
                       "path":  "core-manifest.txt.sig",
                       "bytes":  294,
-                      "mtime":  "2026-10-07T15:43:47",
-                      "sha256":  "9507A445AC8D139A6841C3565A21776E2622A99FAAE3B6D806D4E8DCA75320DF"
+                      "mtime":  "2026-10-07T17:46:08",
+                      "sha256":  "9AA68F01929C7C7CB4D98B4A8E1AF2C4792BF37C2A0C9D35942B0B939EBC4519"
                   },
                   {
                       "path":  "data\\registry.json",
@@ -425,33 +425,21 @@
                   },
                   {
                       "path":  "README.md",
-                      "bytes":  19124,
-                      "mtime":  "2026-10-07T17:38:06",
-                      "sha256":  "D7B86FECE841F999B7A8DF0B43E08CE06BE8543126BB81FC60629C9FABED81C0"
+                      "bytes":  20827,
+                      "mtime":  "2026-10-07T18:18:40",
+                      "sha256":  "BC18A62A8B8147BA83CFF6F8ABEE75801B1D9EDB53A85A665B6090331F614ADE"
                   },
                   {
                       "path":  "SCHEMA.md",
-                      "bytes":  9132,
-                      "mtime":  "2026-10-07T17:38:38",
-                      "sha256":  "275C9F926DD1F252C277735CE3F5CEAC78AB3E5313A1702F0C916B96F4448B27"
-                  },
-                  {
-                      "path":  "snapshot-to-backup.ps1",
-                      "bytes":  5706,
-                      "mtime":  "2026-10-07T16:26:05",
-                      "sha256":  "DE646149731BE122EF6F4F72F24F5D9509E6C392ADE88958AB212E2E4A90E5D5"
-                  },
-                  {
-                      "path":  "sync-to-release.ps1",
-                      "bytes":  6580,
-                      "mtime":  "2026-10-07T16:26:05",
-                      "sha256":  "29B27CCFE315835D57C0774CD208EB65681B9929D8B3CCF31FD8209A71358BB6"
+                      "bytes":  9133,
+                      "mtime":  "2026-10-07T18:20:15",
+                      "sha256":  "7A3EBB3904239DB0BF35544A420EA1F2B56A121B0F3DC6A31D8A51DF05C79342"
                   },
                   {
                       "path":  "经验包-数据分层方案.md",
-                      "bytes":  8749,
-                      "mtime":  "2026-10-07T17:31:10",
-                      "sha256":  "8CC3951AE820ACE5560E9897B04F0843FBD08A06442F43181DF13D74FFA387CA"
+                      "bytes":  8751,
+                      "mtime":  "2026-10-07T18:17:54",
+                      "sha256":  "4BD470F8E4C5985E6BC67B8B4F516CC5F775A30525864A781339334CA18D08D4"
                   },
                   {
                       "path":  "三层架构说明.md",

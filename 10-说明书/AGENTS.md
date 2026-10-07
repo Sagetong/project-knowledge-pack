@@ -12,7 +12,8 @@
 ### 🎯 最快的方式：一条命令拿到全部上下文
 
 ```powershell
-cd %USERPROFILE%\agents\experience-pack\30-工具
+# 进入经验包的 30-工具 目录（下面的 <包目录> 换成经验包实际所在位置）
+cd <包目录>\30-工具
 .\memory.ps1 context
 ```
 
@@ -25,20 +26,25 @@ cd %USERPROFILE%\agents\experience-pack\30-工具
 
 ### 📖 想读文档的话
 
+**下面路径都是相对经验包根目录的**（把 `<包目录>` 换成实际位置）：
+
 | 文件 | 作用 |
 |---|---|
-| `%USERPROFILE%\agents\experience-pack\README.md` | **包入口 —— 先读这个** |
-| `...\10-说明书\FOR-AI.md` | 给 AI 的完整使用指南 |
-| `...\10-说明书\AGENTS.md` | 工作规范（本文件的副本） |
-| `...\00-底层逻辑\ARCHITECTURE.md` | 为什么这样设计 |
-| `...\20-历史经验\STATE.md` | 当前状态 |
-| `...\20-历史经验\LESSONS.md` | 经验教训 |
-| `...\50-环境档案\ENVIRONMENT.md` | 这台电脑的配置与特有坑 |
+| `<包目录>\README.md` | **包入口 —— 先读这个** |
+| `<包目录>\10-说明书\FOR-AI.md` | 给 AI 的完整使用指南 |
+| `<包目录>\10-说明书\AGENTS.md` | 工作规范（本文件） |
+| `<包目录>\00-底层逻辑\ARCHITECTURE.md` | 为什么这样设计 |
+| `<包目录>\20-历史经验\STATE.md` | 当前状态（本机层，可能不存在） |
+| `<包目录>\20-历史经验\LESSONS.md` | 经验教训（本机层，可能不存在） |
+| `<包目录>\50-环境档案\ENVIRONMENT.md` | 这台电脑的配置与特有坑（本机层，可能不存在） |
+
+> **注**：标了"本机层"的文件属于 `local` 层，**不随发行版分发**。
+> 在别人的包里它们通常不存在，这是正常的。
 
 ### ✍️ 学到新东西时，立刻固化
 
 ```powershell
-cd %USERPROFILE%\agents\experience-pack\30-工具
+cd <包目录>\30-工具
 .\harvest.ps1 -Title "..." -Problem "..." -Solution "..." -Reusable "..."
 # 需要生成可复用技能时加 -MakeSkill -SkillName -SkillWhen -SkillSteps
 ```
@@ -335,7 +341,7 @@ Ctrl+S 弹出「另存为」**是正常 Windows 行为，不是异常**。
 ## 调用入口（桥接脚本）
 
 ```
-%USERPROFILE%\agents\B\workspace\bridge\call-agent.ps1
+<用户目录>\agents\B\workspace\bridge\call-agent.ps1
 ```
 
 用法：

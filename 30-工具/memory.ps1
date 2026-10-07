@@ -239,9 +239,15 @@ function Cmd-Context {
     }
     [void]$sb.AppendLine('')
     [void]$sb.AppendLine('== 八、配套文档 ==')
-    [void]$sb.AppendLine('  AGENTS.md   方法论      %USERPROFILE%\agents\B\workspace\AGENTS.md')
-    [void]$sb.AppendLine('  STATE.md    当前状态    %USERPROFILE%\agents\bridge-client\STATE.md')
-    [void]$sb.AppendLine('  LESSONS.md  经验教训    %USERPROFILE%\agents\bridge-client\LESSONS.md')
+    # 2026-10-07 修正：原来这里打印作者机器上的绝对路径，对别人没有意义。
+    # 改为相对经验包根目录的位置，并区分"公开层"与"本机层"。
+    [void]$sb.AppendLine('  README.md   包入口      <包目录>\README.md')
+    [void]$sb.AppendLine('  FOR-AI.md   使用指南    <包目录>\10-说明书\FOR-AI.md')
+    [void]$sb.AppendLine('  AGENTS.md   工作规范    <包目录>\10-说明书\AGENTS.md')
+    [void]$sb.AppendLine('  ARCHITECTURE.md  设计原理 <包目录>\00-底层逻辑\ARCHITECTURE.md')
+    [void]$sb.AppendLine('  （以上随包分发；下列为本机层，通常只在本机存在）')
+    [void]$sb.AppendLine('  STATE.md    当前状态    <包目录>\20-历史经验\STATE.md')
+    [void]$sb.AppendLine('  LESSONS.md  经验教训    <包目录>\20-历史经验\LESSONS.md')
     [void]$sb.AppendLine('')
     [void]$sb.AppendLine('【使用说明】这是机器生成的记忆简报，可直接粘贴给任何 AI 作为项目背景。')
 

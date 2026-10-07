@@ -41,3 +41,8 @@ PROGRESS.md
 # 正确写法是排除【目录里的内容】，再对具体文件取反。
 20-历史经验/data/local/*
 !20-历史经验/data/local/README.md
+# ===== 使用者的本地配置（每人不同，不该提交）=====
+# mirror.config 第一行是"把经验包镜像到哪个目录"。
+# 这是每台机器自己的选择，不属于项目内容。
+30-工具/mirror.config
+30-工具/mirror.config.txt

@@ -56,7 +56,7 @@
 **复制这一行给 AI 执行：**
 
 ```powershell
-cd %USERPROFILE%\agents\experience-pack\30-工具
+cd <包目录>\30-工具      # <包目录> 换成经验包实际所在位置
 .\memory.ps1 context
 ```
 
