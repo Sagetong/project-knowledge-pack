@@ -4,6 +4,8 @@
 
 **一个本地优先、可验证、可迁移的 AI 经验包 —— 让你把经过验证的经验，从一个 AI 带到另一个 AI。**
 
+**English overview: [README.en.md](README.en.md)**
+
 ---
 
 ## 这是什么
