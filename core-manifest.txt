@@ -2,20 +2,23 @@
 # Purpose: list every core file with its SHA256 fingerprint.
 # Verify:  ssh-keygen -Y verify -f allowed_signers -I tally-author@SageTong -n file -s core-manifest.txt.sig < core-manifest.txt
 # Author:  Sage Tong
-# Created: 2026-10-07T18:32:22+08:00
+# Created: 2026-10-08T14:26:43+08:00
 
 core\README.md  572c790440c906dc7a7b35e61186a1dca467e8c5293fa63683e213b7b5917665
-core\security.json  0c778253cd4d86272583a8212c593dbefeb391f2462b444f231b9d9f0b75d23a
+core\security.json  b3bca85aa26797256523d7c837ec0f7a140d566306f7b003b639043b95011b0e
 00-底层逻辑\ARCHITECTURE.md  270d201e5fb75a4288b7d34331181db700e212bac246b8a41273ca1c9c2a6805
 00-底层逻辑\ARCHITECTURE-3AI.md  af7e2e6e240f8aac101f5ce4e345868a8dfae9bbc67c68c9dcbdb420bb07cff0
 00-底层逻辑\GROWTH-MODEL.md  a5b02a2887c714a9d12a554b35ddb035930598c86f190d3fd2f75f21cd2c1d1a
 00-底层逻辑\MAINTAINER-WORKFLOW.md  38c52b317910028643cfc51b078082319f83ff1731cfe0b4f5185d5d9a87c18f
 00-底层逻辑\TIGER-TALLY-DESIGN.md  b488683e4589c6f90d5525963aff90d3bf83b764deec0e7923c1ebb09a18f2b2
+30-工具\build-index.ps1  38b09ce1e6aae68148a800fc91a4432b8f23410c14863ca2bdf894d90f3d4046
 30-工具\harvest.ps1  68147091a36e5f840f47dbe6c2d1ee62d184bb07907ccf28bdb1882baec10183
 30-工具\manifest.ps1  18c088d5557c1a03389c36d5913c2f4f3b1c69edf5113421c8261aade5a9f386
 30-工具\memory.ps1  33d49ebd81ac0ca8d8de5700699c419a798e6b2177c44710fc82896a55ed14f5
 30-工具\promote.ps1  ed2e20fbe1feae640488d47090513ab2e0df989d0305afcca4d0dc1ccd7acb00
 30-工具\promote-to-universal.ps1  6d3ab7cb9066b85bc4cc84e9e54a627ca886dbd2ad5c4b30c528f3629c8580a2
+30-工具\release-gate.ps1  d9b4fa7731a5c58fd60a84cee2a9c632dece891c8ea2716fdd2bc912eec233f2
+30-工具\selfcheck.ps1  0f18ceead65a5c168ce503652231790f5fad67b77093daa336dee7b3f7b57f42
 30-工具\sync-pack.ps1  759c2a155c38c233681d000365201119656deef957a37c6849f1920bf582be18
 30-工具\tally\init-tally.ps1  b42b8ad7674f2698984c5a405f6fdcf0a9916e046d97d0e13c7b199fb6a1a0a1
 30-工具\tally\lock.ps1  9e1821dc5230533dc85015a0229224074434f95deb073f319ce1132be79d9d4b

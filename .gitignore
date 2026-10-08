@@ -30,6 +30,18 @@ PROGRESS.md
 90-虎符v2/*-meta.json
 90-虎符v2/_passphrase_temp.txt
 
+# ===== 自动生成的派生文件（可从源数据重建，不该提交）=====
+# CONTEXT.md 由 `30-工具\memory.ps1 context` 生成，内容全部派生自 *.jsonl。
+# 提交它会造成三件事：① 每次有人跑 context 就产生 diff 噪音；
+# ② 仓库体积无谓变大（实测约 67 KB）；
+# ③ 与源数据不一致时反而误导读者。
+# 需要时随时用一条命令重建。
+20-历史经验/data/CONTEXT.md
+# INDEX.md 是【有意提交】的：它是"先扫一眼标题"这一最轻门槛的载体，
+# 且由 build-index.ps1 生成，内容稳定、体积小（约 30 KB）。
+# 若你更新了数据，请重新生成后再提交：
+#   powershell -ExecutionPolicy Bypass -File 30-工具\build-index.ps1
+
 # ===== 任何形式的备份 =====
 *.bak
 *.bak-*

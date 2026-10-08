@@ -99,16 +99,21 @@ ssh-keygen -Y verify -f allowed_signers -I tally-author@SageTong `
 
 ---
 
-# 第四节 · 实测结果（2026-10-07）
+# 第四节 · 实测结果（2026-10-07，2026-10-08 更正指纹）
 
 | 测试项 | 结果 |
 |---|---|
 | 生成 Ed25519 密钥对 | ✅ 私钥 419B，公钥 107B |
-| 公钥指纹 | `SHA256:rHg48crFstI75H1I67iz/zQpehf5nPcVOQTQA0Hiuao`（测试密钥） |
+| **公钥指纹（正式）** | **`SHA256:i2psGLL4fISQbe69FWxbLirF0aH7KgjQArG77vTjX54`** |
 | 对核心清单签名 | ✅ 294B 签名文件 |
 | **A. 原文件验签** | ✅ `Good "file" signature` |
 | **B. 篡改后验签** | ✅ `Signature verification failed: incorrect signature` |
 | **C. 冒名身份验签** | ✅ `Could not verify signature` |
+
+> ⚠️ **2026-10-08 更正**：本节原先记录的指纹
+> `SHA256:rHg48crFstI75H1I67iz/zQpehf5nPcVOQTQA0Hiuao` 属于**早期 DEMO 测试密钥**，
+> 与仓库中实际使用的正式密钥不符，已删除该错误值。**核对指纹请以仓库根目录的
+> `allowed_signers` 实物为准**（`ssh-keygen -lf allowed_signers` 可自行复算）。
 
 **⇒ 三项判定全部符合预期。机制完全可用。**
 

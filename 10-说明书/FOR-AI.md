@@ -1,28 +1,101 @@
 # 给 AI 的说明书
 
 > **你是接手这个项目的 AI。这份文件告诉你怎么用这个经验包。**
-> 读完它（约 5 分钟），你就能拥有完整上下文，不必让用户重新解释。
+>
+> **⚠️ 先读根目录的 [`AGENTS.md`](../AGENTS.md)（约 150 行）。**
+> 那份是入口，写明了三档使用门槛与可直接复制的命令。本文件是**详细版**，
+> 在你需要更多细节时再读。
 
 ---
 
-# 第一步：三条命令，拿到全部上下文
+# 第一步：先做一次自检（只在新 clone 后需要）
+
+```powershell
+powershell -ExecutionPolicy Bypass -File '<经验包路径>\30-工具\selfcheck.ps1'
+```
+
+它检查运行环境、目录结构、数据可解析性、读取与写入能力、索引与签名。
+**全绿就说明可以直接用。**
+
+---
+
+# 第二步：按门槛用起来 —— 从最轻的开始，够用就停
+
+**⚠️ 不要一上来就跑 `memory.ps1 context`。** 那是最后手段，约 36 KB / 1.5-1.9 万 token。
+
+## 第 0 档 · 开始任务前先扫标题（几秒）
+
+```powershell
+Get-Content '<经验包路径>\20-历史经验\data\INDEX.md'
+```
+
+或：
 
 ```powershell
 cd <经验包路径>\30-工具
+.\memory.ps1 summary            # 最轻：只列各类条数
+.\memory.ps1 lessons            # 全部经验标题
+.\memory.ps1 timeline -Last 20  # 最近发生了什么
+```
 
-# ① 概览：看看记忆库里有什么
-.\memory.ps1
+**⇒ 没有相关的就去做你原本的事，不要硬读。**
 
-# ② ★ 生成完整简报（最重要）
-.\memory.ps1 context
-#   → 打印 + 写入 20-历史经验\data\CONTEXT.md
-#   → 里面有：已验证事实、假设、待验证、已证伪、经验、决策、时间线
+## 第 1 档 · 按关键词检索（怀疑有相关经验时）
 
-# ③ 需要时搜索
+```powershell
+cd <经验包路径>\30-工具
 .\memory.ps1 search <关键词>
 ```
 
-**⇒ 执行完这三步，你就知道这个项目的全部关键信息。**
+它同时搜 facts / lessons / decisions / timeline，并打印命中的**原始行**（含 id 与证据）。
+
+## 第 2 档 · 实在想不出来，才做深度检索
+
+```powershell
+cd <经验包路径>\30-工具
+.\memory.ps1 context          # ⚠️ 全量简报，约 36 KB
+.\memory.ps1 decisions        # 当初为什么这么定
+.\memory.ps1 facts verified   # 只看已实测的事实
+```
+
+## 第 3 档 · 可选：想到了就写一条（不是义务）
+
+**⇒ 这一档是【邀请】，不是义务。** 本库追求有价值，不是大。
+
+两条参考标准（满足任一条才考虑写）：
+
+```
+① 解决问题花了很长时间（过程曲折、试错多次、绕了远路）
+② 遇到的是以前没遇到、超出原有认知的情况（新现象、新机制、新取舍）
+```
+
+**两条都不满足就别写** —— 常规操作、例行修复写进来只是噪音，
+反而让后来的人分不清哪些真正重要。
+
+
+```powershell
+cd <经验包路径>\30-工具
+.\memory.ps1 add-lesson -Title "..." -Kind technique -Context "..." `
+    -Mistake "..." -Solution "..." -Reusable "..." -Tags "a,b" -Namespace contributed
+```
+
+**⚠️ 必须指定 `-Namespace contributed`**（外部经验进隔离区）。
+省略的话默认写 `local`（本机层），而 local 层**不对外分发** —— 你的经验就传不出去。
+
+> **参数名以脚本实际接受的为准。** 用错会被 PowerShell **静默忽略** ——
+> 命令看起来成功了，但字段是空的、或者数据写到了默认层。
+>
+> | 命令 | 参数 |
+> |---|---|
+> | `add-lesson` | `-Title -Kind -Context -Mistake -Solution -Reusable -Tags` |
+> | `add-fact` | `-Claim -Status -Evidence -Tags` |
+> | `add-decision` | `-Question -Chosen -Rejected -Reason`（**不是** `-Decision` / `-Rationale` / `-Alternatives`） |
+> | `add-event` | `-Event -Detail -Actor` |
+>
+> 所有写入命令都支持 `-Namespace local|universal|contributed`（默认 `local`）。
+> 不确定时跑 `.\memory.ps1`（不带参数）看用法，或读脚本头部的注释。
+
+---
 
 ---
 

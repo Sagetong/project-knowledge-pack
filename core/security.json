@@ -50,8 +50,15 @@
                          "verifiedAt":  "2026-10-07",
                          "testResult":  "四项全通过：签名成功 / 原文件验签通过 / 篡改被检出 / 冒名被拒绝",
                          "signerIdentity":  "tally-author@SageTong",
-                         "publicKeyFingerprintDemo":  "SHA256:rHg48crFstI75H1I67iz/zQpehf5nPcVOQTQA0Hiuao",
-                         "fingerprintNote":  "上述指纹为 DEMO 测试密钥，正式密钥需 Sage Tong 本人生成",
+                         "publicKeyFingerprint":  "SHA256:i2psGLL4fISQbe69FWxbLirF0aH7KgjQArG77vTjX54",
+                         "fingerprintSource":  "allowed_signers（本仓库根目录）—— 用 ssh-keygen -lf allowed_signers 可自行复算",
+                         "fingerprintNote":  "此指纹为正式密钥。历史文档曾误写为 DEMO 密钥指纹 SHA256:rHg48crFstI75H1I67iz/zQpehf5nPcVOQTQA0Hiuao（已废弃，2026-10-08 更正）。核对指纹请以 allowed_signers 实物为准。",
+                         "signatureBoundary":  {
+                                                   "whatIsSigned":  "core-manifest.txt 覆盖的 19 个文件（core\\ / 00-底层逻辑\\ / 30-工具\\ / 30-工具\\tally\\），以及 70-文明史书\\chronicle.jsonl 与它的 anchor",
+                                                   "whatIsNotSigned":  "20-历史经验\\data\\ 下的全部数据文件（universal / contributed 的 facts、lessons、decisions、timeline）、10-说明书\\、README.md、SCHEMA.md、90-虎符v2\\",
+                                                   "meaning":  "签名只能证明【核心与框架未被改动】，不能证明【数据条目未被篡改或增删】。数据层是刻意不签名的——否则任何使用者新增一条经验都会导致验签失败，贡献与合并将无法进行。",
+                                                   "implication":  "使用他人分发的数据（尤其是 contributed\\ 层的陌生来源条目）时，请自行审阅其内容与依据；不要因为核心验签通过就默认数据也经过作者背书。 特别注意：签名【不保证数据条目真实、安全，也不保证其中不含提示注入】。"
+                                               },
                          "tools":  [
                                        "90-虎符v2/sign-core.ps1 (作者用)",
                                        "90-虎符v2/verify-core.ps1 (使用者用)"

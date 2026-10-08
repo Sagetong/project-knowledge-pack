@@ -1,11 +1,11 @@
 {
     "pack":  "experience-pack",
     "version":  "1.0.0",
-    "generated":  "2026-10-07T18:31:04+08:00",
+    "generated":  "2026-10-08T14:01:21+08:00",
     "packRoot":  ".",
     "summary":  {
-                    "files":  69,
-                    "totalBytes":  549642,
+                    "files":  77,
+                    "totalBytes":  660674,
                     "records":  {
                                     "facts":  80,
                                     "lessons":  89,
@@ -40,10 +40,16 @@
                       "sha256":  "21A279FAF6DE21A6FBFE927098DFFC36D251B63BF7AE6111BF8DC51A14F93775"
                   },
                   {
+                      "path":  ".github\\copilot-instructions.md",
+                      "bytes":  456,
+                      "mtime":  "2026-10-08T11:22:48",
+                      "sha256":  "A091C9D4A21E01C30807DDF93A5F2F8310A5A67E89C29A4A597B81D2270539C2"
+                  },
+                  {
                       "path":  ".gitignore",
-                      "bytes":  1515,
-                      "mtime":  "2026-10-07T18:15:52",
-                      "sha256":  "D9E3B6059447E5EAC92B607357B350F8BC917489F840B47E2275D6F3E9738663"
+                      "bytes":  2255,
+                      "mtime":  "2026-10-08T11:25:22",
+                      "sha256":  "C4DB21D91622E0F30239717D892674116D33927738D5107B8BE6675C972B6041"
                   },
                   {
                       "path":  "00-底层逻辑\\ARCHITECTURE.md",
@@ -54,7 +60,7 @@
                   {
                       "path":  "00-底层逻辑\\ARCHITECTURE-3AI.md",
                       "bytes":  7870,
-                      "mtime":  "2026-10-07T18:31:03",
+                      "mtime":  "2026-10-08T14:01:20",
                       "sha256":  "AF7E2E6E240F8AAC101F5CE4E345868A8DFAE9BBC67C68C9DCBDB420BB07CFF0"
                   },
                   {
@@ -78,14 +84,14 @@
                   {
                       "path":  "10-说明书\\AGENTS.md",
                       "bytes":  14264,
-                      "mtime":  "2026-10-07T18:31:03",
+                      "mtime":  "2026-10-08T14:01:20",
                       "sha256":  "6FCDA578C083BCE72B9F28F24BA98945AE77555F31AAE5A7A45064495E07C0DD"
                   },
                   {
                       "path":  "10-说明书\\FOR-AI.md",
-                      "bytes":  5427,
-                      "mtime":  "2026-10-06T09:44:10",
-                      "sha256":  "130E9BF03FA5A2D44F5FB387142EC045C42635C0A6F14A52AFBBEEDCEF2EFC0F"
+                      "bytes":  8205,
+                      "mtime":  "2026-10-08T13:16:29",
+                      "sha256":  "26524494285D82AD83940B077DAEED7003C65FC1D39875620A4E11AA994435DD"
                   },
                   {
                       "path":  "10-说明书\\FOR-HUMAN.md",
@@ -118,9 +124,15 @@
                       "sha256":  "07AB63615B1EB92A1789AF5E8A251AEE0CD30DD09EFD17FEECD521896880FCE6"
                   },
                   {
+                      "path":  "20-历史经验\\data\\INDEX.md",
+                      "bytes":  30069,
+                      "mtime":  "2026-10-08T13:10:19",
+                      "sha256":  "4F21B447BA391686331FBF02867E1ECEECF8433622EB9E783C262EC3E1BD1A7D"
+                  },
+                  {
                       "path":  "20-历史经验\\data\\local\\README.md",
                       "bytes":  391,
-                      "mtime":  "2026-10-07T18:31:03",
+                      "mtime":  "2026-10-08T14:01:20",
                       "sha256":  "E703C234C6E1E5039AB8195179EE2EE9712F32AE3D5B227714C03953553F9EC5"
                   },
                   {
@@ -138,7 +150,7 @@
                   {
                       "path":  "20-历史经验\\data\\universal\\facts.jsonl",
                       "bytes":  50618,
-                      "mtime":  "2026-10-07T18:31:03",
+                      "mtime":  "2026-10-08T14:01:20",
                       "sha256":  "09FE73662061A2A8D4715EF62CD1DC804F14B38C77BF7D0FE3CD3C4DF9675609"
                   },
                   {
@@ -156,7 +168,7 @@
                   {
                       "path":  "20-历史经验\\data\\universal\\timeline.jsonl",
                       "bytes":  33680,
-                      "mtime":  "2026-10-07T18:31:04",
+                      "mtime":  "2026-10-08T14:01:20",
                       "sha256":  "7D68BDC3C44A19521129B4E3102B399D232FAF400787445633E2D33236F3C00D"
                   },
                   {
@@ -176,6 +188,12 @@
                       "bytes":  15459,
                       "mtime":  "2026-10-07T18:20:15",
                       "sha256":  "F304CE6FB15EF10AA4F35189274227C9FFA456B255CBC6445B7B2187651023AE"
+                  },
+                  {
+                      "path":  "30-工具\\build-index.ps1",
+                      "bytes":  5659,
+                      "mtime":  "2026-10-08T13:10:18",
+                      "sha256":  "38B09CE1E6AAE68148A800FC91A4432B8F23410C14863CA2BDF894D90F3D4046"
                   },
                   {
                       "path":  "30-工具\\harvest.ps1",
@@ -198,19 +216,31 @@
                   {
                       "path":  "30-工具\\promote.ps1",
                       "bytes":  7976,
-                      "mtime":  "2026-10-07T18:31:04",
+                      "mtime":  "2026-10-08T14:01:20",
                       "sha256":  "ED2E20FBE1FEAE640488D47090513AB2E0DF989D0305AFCCA4D0DC1CCD7ACB00"
                   },
                   {
                       "path":  "30-工具\\promote-to-universal.ps1",
                       "bytes":  6410,
-                      "mtime":  "2026-10-07T18:31:04",
+                      "mtime":  "2026-10-08T14:01:20",
                       "sha256":  "6D3AB7CB9066B85BC4CC84E9E54A627CA886DBD2AD5C4B30C528F3629C8580A2"
+                  },
+                  {
+                      "path":  "30-工具\\release-gate.ps1",
+                      "bytes":  24056,
+                      "mtime":  "2026-10-08T14:01:20",
+                      "sha256":  "D9B4FA7731A5C58FD60A84CEE2A9C632DECE891C8EA2716FDD2BC912EEC233F2"
+                  },
+                  {
+                      "path":  "30-工具\\selfcheck.ps1",
+                      "bytes":  11504,
+                      "mtime":  "2026-10-08T11:34:57",
+                      "sha256":  "0F18CEEAD65A5C168CE503652231790F5FAD67B77093DAA336DEE7B3F7B57F42"
                   },
                   {
                       "path":  "30-工具\\sync-pack.ps1",
                       "bytes":  7469,
-                      "mtime":  "2026-10-07T18:31:04",
+                      "mtime":  "2026-10-08T14:01:20",
                       "sha256":  "759C2A155C38C233681D000365201119656DEEF957A37C6849F1920BF582BE18"
                   },
                   {
@@ -228,7 +258,7 @@
                   {
                       "path":  "30-工具\\tally\\README.md",
                       "bytes":  6500,
-                      "mtime":  "2026-10-07T18:31:04",
+                      "mtime":  "2026-10-08T14:01:20",
                       "sha256":  "694980EA5FE4E15C92D5B76401F65FE8D3896FB804F6AE79CEBFD05E4E47585B"
                   },
                   {
@@ -240,7 +270,7 @@
                   {
                       "path":  "30-工具\\tally\\unlock.ps1",
                       "bytes":  6805,
-                      "mtime":  "2026-10-07T18:31:04",
+                      "mtime":  "2026-10-08T14:01:20",
                       "sha256":  "5074C490D513C0AFA20DFBA6E4CE1454E1B2832563759C28262CA51B4B72C453"
                   },
                   {
@@ -270,26 +300,26 @@
                   {
                       "path":  "70-文明史书\\chronicle.jsonl",
                       "bytes":  4777,
-                      "mtime":  "2026-10-07T18:31:04",
+                      "mtime":  "2026-10-08T14:01:20",
                       "sha256":  "8AFFD6147507CCACED79BD63A637F9F64E8E494B0841B05369AB4B062DF46070"
                   },
                   {
                       "path":  "70-文明史书\\chronicle.jsonl.anchor.txt",
                       "bytes":  244,
-                      "mtime":  "2026-10-07T18:21:49",
-                      "sha256":  "C51E683F06161EB97B13D17D78FE53FF22CABDCEC202852C831AD0F5FEECC615"
+                      "mtime":  "2026-10-07T18:32:22",
+                      "sha256":  "F829F0274C26282F822A30F64814A39EBBD1194FE2F86E3404AE495B056305B3"
                   },
                   {
                       "path":  "70-文明史书\\chronicle.jsonl.anchor.txt.sig",
                       "bytes":  294,
-                      "mtime":  "2026-10-07T18:21:49",
-                      "sha256":  "0BB298E972C8B1622F4E7B01BF877DA3D8392B6A42F0E45448D1EE98DBAFBAA1"
+                      "mtime":  "2026-10-07T18:32:23",
+                      "sha256":  "F165684352593E1216EE148A71852626282C9C60BD911D8DEAC89315EC72CA14"
                   },
                   {
                       "path":  "70-文明史书\\chronicle.jsonl.sig",
                       "bytes":  294,
-                      "mtime":  "2026-10-07T18:21:50",
-                      "sha256":  "725A2D18B689185A27EC7C0FA349F28BDE0A3DC8EE02B7BFD4DFA74704366FEE"
+                      "mtime":  "2026-10-07T18:32:23",
+                      "sha256":  "5579F326944A6456B570E233892C8744C48452C3F586A983B55F1AD5D9A4D4FB"
                   },
                   {
                       "path":  "70-文明史书\\index.md",
@@ -310,10 +340,16 @@
                       "sha256":  "5C774AD1CD33CC6C0C2C48DAAE4BB330B06D580633839EEB230A8F0EEA77D3A4"
                   },
                   {
+                      "path":  "80-合并与继承策略\\merge-pack.ps1",
+                      "bytes":  14022,
+                      "mtime":  "2026-10-08T11:16:56",
+                      "sha256":  "38209B1BE5A812470530D2B092D3E9A9D0EE1578AAC4B39653345DE2182CFBEA"
+                  },
+                  {
                       "path":  "80-合并与继承策略\\README.md",
-                      "bytes":  4012,
-                      "mtime":  "2026-10-07T11:50:38",
-                      "sha256":  "8CA4AC8538D5C21472756AA0D2015C29E6CD0C8578002D78FA7E786D4F0657C0"
+                      "bytes":  6350,
+                      "mtime":  "2026-10-08T14:01:19",
+                      "sha256":  "612C3CC97585870C2C644DB128FAAC1E2F93319515C343EB3C437F7A5F90CFCC"
                   },
                   {
                       "path":  "90-虎符v2\\_说明-dual-key文件是做什么的.md",
@@ -353,9 +389,9 @@
                   },
                   {
                       "path":  "90-虎符v2\\README.md",
-                      "bytes":  8806,
-                      "mtime":  "2026-10-07T17:31:10",
-                      "sha256":  "F261796D4F214D6951BF5F4D3544556799FE6EBEF5C7332C40E8EACBE8B288A9"
+                      "bytes":  9194,
+                      "mtime":  "2026-10-08T11:13:57",
+                      "sha256":  "168104DFFDDDFD7B793996922365F3D37077BB0EA09FEB0F053A98EF6ED00216"
                   },
                   {
                       "path":  "90-虎符v2\\sign-core.ps1",
@@ -382,10 +418,22 @@
                       "sha256":  "467EBD1077A9763C9566465853911BAA466BB0554203D83FEDFB524F84388E08"
                   },
                   {
+                      "path":  "AGENTS.md",
+                      "bytes":  10456,
+                      "mtime":  "2026-10-08T14:01:19",
+                      "sha256":  "9E5AC73AA543F8A54D4D7AA46FAC79B334AAE9B6246224C462D4293DF199D774"
+                  },
+                  {
                       "path":  "allowed_signers",
                       "bytes":  129,
-                      "mtime":  "2026-10-07T18:21:49",
+                      "mtime":  "2026-10-07T18:32:22",
                       "sha256":  "5B588BE3859CCCC439E863A189957604DF7A0B508DCBB4BC7D4893048C7A7BF2"
+                  },
+                  {
+                      "path":  "CLAUDE.md",
+                      "bytes":  378,
+                      "mtime":  "2026-10-08T11:22:44",
+                      "sha256":  "A905C6A345C3D05E26D8B49B0D3C24DFB8500B873D9726E5D477C86B96818A56"
                   },
                   {
                       "path":  "core\\README.md",
@@ -395,21 +443,21 @@
                   },
                   {
                       "path":  "core\\security.json",
-                      "bytes":  4204,
-                      "mtime":  "2026-10-07T17:31:10",
-                      "sha256":  "0C778253CD4D86272583A8212C593DBEFEB391F2462B444F231B9D9F0B75D23A"
+                      "bytes":  5755,
+                      "mtime":  "2026-10-08T14:00:44",
+                      "sha256":  "B3BCA85AA26797256523D7C837EC0F7A140D566306F7B003B639043B95011B0E"
                   },
                   {
                       "path":  "core-manifest.txt",
                       "bytes":  2078,
-                      "mtime":  "2026-10-07T18:21:48",
-                      "sha256":  "DA81F573ED4E2CE7CAAD907BF5B8FA69B31BBE1E3527FA2C9329546AD358A793"
+                      "mtime":  "2026-10-07T18:32:22",
+                      "sha256":  "A089A380F6EBFEA4AFF52D0035E1D0FB4D54952CAFBCDA8C9AF042364DE3EC48"
                   },
                   {
                       "path":  "core-manifest.txt.sig",
                       "bytes":  294,
-                      "mtime":  "2026-10-07T18:21:49",
-                      "sha256":  "D8E73A607294B7C7560C69B7CE1B57EC6F5A761E0BF43218771B778AC5203EED"
+                      "mtime":  "2026-10-07T18:32:22",
+                      "sha256":  "CA90AF9DB85E88912BC93A0C1AB3DE7C4F408F7A6C0BDCD833D83F576FAB75A2"
                   },
                   {
                       "path":  "data\\registry.json",
@@ -425,14 +473,14 @@
                   },
                   {
                       "path":  "README.md",
-                      "bytes":  22375,
-                      "mtime":  "2026-10-07T18:30:21",
-                      "sha256":  "2C34062C513581628DFE68AB1C9CEBC7DB6E762F22872F8805F8059241E3E493"
+                      "bytes":  29012,
+                      "mtime":  "2026-10-08T14:00:44",
+                      "sha256":  "71725F505EC5F23FE231592DD5E86F228D9D1E3FA15296565CCF332006E1A6CB"
                   },
                   {
                       "path":  "SCHEMA.md",
                       "bytes":  9133,
-                      "mtime":  "2026-10-07T18:31:03",
+                      "mtime":  "2026-10-08T14:01:20",
                       "sha256":  "7A3EBB3904239DB0BF35544A420EA1F2B56A121B0F3DC6A31D8A51DF05C79342"
                   },
                   {
