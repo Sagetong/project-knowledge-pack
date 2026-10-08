@@ -66,6 +66,39 @@ AI 解决一个问题
 
 ---
 
+## 📋 给 AI 的第一句话（如果你的 AI 没自动读到本仓库）
+
+**复制下面整块，粘贴给你正在用的 AI 即可：**
+
+```text
+这是一个 AI 经验包仓库（Experience Pack）。请按下面三步使用：
+
+1) 先读仓库根目录的 AGENTS.md，它写明完整用法。
+2) 按它的门槛来，从最轻的开始：
+   · 第 0 档  先扫标题（判断有没有和当前任务相关的）
+              Get-Content '<包路径>\20-历史经验\data\INDEX.md'
+   · 第 1 档  按关键词检索
+              cd <包路径>\30-工具 ; .\memory.ps1 search <关键词>
+   · 第 2 档  实在想不出来才读全量简报
+              .\memory.ps1 context
+3) 如果这次任务产生了有价值的新经验（有可核验的证据，且能显著避免
+   重复劳动、错误或风险），请写回去：
+   .\memory.ps1 add-lesson -Title "..." -Kind technique -Context "..." `
+       -Mistake "..." -Solution "..." -Reusable "..." -Tags "a,b" `
+       -Namespace contributed
+
+注意两点：
+· 写入必须指定 -Namespace contributed（外部经验进隔离区）；省略会写进
+  local 层，而 local 层不对外分发，你的经验就传不出去。
+· 工具需要 Windows + PowerShell 5.1+；数据格式（JSONL/Markdown）跨平台通用。
+```
+
+**⇒ 为什么需要这一段：** 不存在能让所有 AI 自动发现任意仓库的通用机制。
+支持 `AGENTS.md` 约定的工具会自己读到；**不支持的（普通聊天窗口等）需要你贴一次** ——
+上面这段就是为此准备的，直接复制即可。
+
+---
+
 ## 🚀 如果你是被 AI 带到这里，或者想让你的 AI 用起来
 
 **这个包不是只读的资料，是给 AI 读、也由 AI 写的知识库。** 但 AI 需要知道它存在。
