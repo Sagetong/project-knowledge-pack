@@ -413,7 +413,12 @@ if ($overall -eq 'PASS') {
 # 报告【写在隔离目录之外】（默认放发行版同级目录），原因有两条：
 #   ① 隔离目录随后会被清理，报告要保留才有用；
 #   ② 控制台输出会受代码页影响（中文可能乱码），而报告文件是 UTF-8 无 BOM，可靠。
-$reportPath = if ($ReportPath) {
+#
+# ⚠️ 变量名注意：这里刻意用 $GateReportFullPath（而不是 $GateReportFullPath）。
+# 因为参数叫 $ReportPath，而 PowerShell 变量名【不区分大小写】——
+# 写 $GateReportFullPath 会被视为同一个变量，等于把参数值覆盖掉。
+# 那是"靠大小写不敏感才碰巧能跑"的写法，本机已因此踩坑多次（l088/l160/l177/l181）。
+$GateReportFullPath = if ($ReportPath) {
     $ReportPath
 } else {
     Join-Path (Split-Path $ReleasePack -Parent) ('GATE-REPORT-' + (Get-Date -Format 'yyyyMMdd-HHmmss') + '.md')
@@ -431,9 +436,9 @@ try {
     $rep += '## 明细'
     $rep += ''
     foreach ($d in $script:details) { $rep += '- ' + $d }
-    [System.IO.File]::WriteAllText($reportPath, ($rep -join [char]13 + [char]10), (New-Object System.Text.UTF8Encoding($false)))
+    [System.IO.File]::WriteAllText($GateReportFullPath, ($rep -join [char]13 + [char]10), (New-Object System.Text.UTF8Encoding($false)))
     Say ''
-    Say ('  报告已写入: ' + $reportPath)
+    Say ('  报告已写入: ' + $GateReportFullPath)
 } catch {
     Say ('  [注意] 报告写入失败: ' + $_.Exception.Message)
 }
